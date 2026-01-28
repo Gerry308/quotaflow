@@ -2,12 +2,12 @@ import { pgTable, text, serial, integer, boolean, timestamp, doublePrecision } f
 import { relations } from "drizzle-orm";
 import { createInsertSchema } from "drizzle-zod";
 import { z } from "zod";
-import { users as authUsers } from "./models/auth";
+// import { users as authUsers } from "./models/auth"; // import { users as authUsers } from "./models/auth";
 
 // === TABLE DEFINITIONS ===
 
 // Re-export auth users
-export const users = authUsers;
+// export const users = authUsers;
 
 // User Profile / Preferences (Extended User Data)
 export const userProfiles = pgTable("user_profiles", {
@@ -132,6 +132,5 @@ export type JobResponse = Job & { matchScore?: number };
 export type ApplicationResponse = Application & { job?: Job };
 export type TailoredResumeResponse = TailoredResume;
 
-// Export sub-modules
-export * from "./models/auth";
-export * from "./models/chat";
+// export * from "./models/auth";
+// export * from "./models/chat";
