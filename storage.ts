@@ -6,9 +6,9 @@ import {
 } from "@shared/schema";
 import { db } from "./db";
 import { eq, desc, and, gte, sql } from "drizzle-orm";
-import { authStorage, type IAuthStorage } from "./replit_integrations/auth/storage";
+// import { authStorage, type IAuthStorage } from "./replit_integrations/auth/storage";
 
-export interface IStorage extends IAuthStorage {
+export interface IStorage {
   getUserProfile(userId: string): Promise<UserProfile | undefined>;
   updateUserProfile(userId: string, prefs: Partial<InsertUserProfile>): Promise<UserProfile>;
   
@@ -35,8 +35,8 @@ export interface IStorage extends IAuthStorage {
   // Site Metrics temporarily disabled for publishing
 }
 
-export class DatabaseStorage implements IStorage {
-  async getUser(id: string) { return authStorage.getUser(id); }
+// async getUser(id: string) { return authStorage.getUser(id); }
+  // async upsertUser(user: any) { return authStorage.upsertUser(user); }
   async upsertUser(user: any) { return authStorage.upsertUser(user); }
 
   // User Profile
