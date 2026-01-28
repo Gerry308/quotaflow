@@ -10,7 +10,7 @@ async function buildServer() {
     console.log('Building server...');
     
     await build({
-      entryPoints: [resolve(__dirname, '../server/index.ts')],
+      entryPoints: [resolve(__dirname, '../index.ts')],  // Changed from '../server/index.ts'
       bundle: true,
       platform: 'node',
       target: 'node18',
