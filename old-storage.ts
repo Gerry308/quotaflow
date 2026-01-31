@@ -1,4 +1,3 @@
-export class DatabaseStorage implements IStorage {
 import { 
   userProfiles, jobs, applications, tailoredResumes,
   type UserProfile, type InsertUserProfile,
