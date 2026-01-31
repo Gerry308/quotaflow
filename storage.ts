@@ -8,9 +8,7 @@ import { db } from "./db";
 import { eq, desc, and, gte, sql } from "drizzle-orm";
 // import { authStorage, type IAuthStorage } from "./replit_integrations/auth/storage";
 
-export interface IStorage {
-  getUserProfile(userId: string): Promise<UserProfile | undefined>;
-  updateUserProfile(userId: string, prefs: Partial<InsertUserProfile>): Promise<UserProfile>;
+
   
   getJobs(): Promise<Job[]>;
   getJobById(id: number): Promise<Job | undefined>;
