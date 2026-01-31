@@ -10,10 +10,7 @@ import { eq, desc, and, gte, sql } from "drizzle-orm";
 
 
   
-  getJobs(): Promise<Job[]>;
-  getJobById(id: number): Promise<Job | undefined>;
-  createJob(job: CreateJobRequest): Promise<Job>;
-  clearJobs(): Promise<void>;
+ 
   
   getApplications(userId: string): Promise<(Application & { job?: Job })[]>;
   createApplication(app: CreateApplicationRequest): Promise<Application>;
