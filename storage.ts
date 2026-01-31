@@ -35,9 +35,14 @@ export interface IStorage {
   // Site Metrics temporarily disabled for publishing
 }
 
-// async getUser(id: string) { return authStorage.getUser(id); }
-  // async upsertUser(user: any) { return authStorage.upsertUser(user); }
-  async upsertUser(user: any) { return authStorage.upsertUser(user); }
+async getUser(id: string) { 
+  // Placeholder - auth integration removed for deployment
+  return null; 
+}
+ async upsertUser(user: any) { 
+  // Placeholder - auth integration removed for deployment
+  return null; 
+}
 
   // User Profile
   async getUserProfile(userId: string): Promise<UserProfile | undefined> {
