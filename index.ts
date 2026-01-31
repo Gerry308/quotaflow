@@ -1,5 +1,5 @@
 import express, { type Request, Response, NextFunction } from "express";
-import { registerRoutes } from "./routes";
+import { registerRoutes } from "./registerRoutes";
 import { serveStatic } from "./static";
 import { createServer } from "http";
 import { autoApplyService } from "./autoApplyService";
@@ -61,7 +61,6 @@ app.use((req, res, next) => {
 });
 
 (async () => {
-  // await registerRoutes(httpServer, app);
 // TODO: Add route handlers back
 
   app.use((err: any, _req: Request, res: Response, _next: NextFunction) => {
