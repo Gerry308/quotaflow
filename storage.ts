@@ -1,3 +1,4 @@
+export class DatabaseStorage implements IStorage {
 import { 
   userProfiles, jobs, applications, tailoredResumes,
   type UserProfile, type InsertUserProfile,
@@ -187,4 +188,4 @@ async getUser(id: string) {
   // Site Metrics temporarily disabled for publishing
 }
 
-export const storage = new DatabaseStorage();
+}export const storage = new DatabaseStorage();
